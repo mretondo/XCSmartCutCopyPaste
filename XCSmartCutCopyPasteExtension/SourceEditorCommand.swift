@@ -51,9 +51,6 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             firstObject!.end.column = 0
         }
         
-        // line selection mode is only valid if all selections are line selections
-        let isLineSelectionMode = areAllSelectionsInLineMode(selections)
-        
         // insertion point line needs to adjusted upward as lines are deleted above it
         // insertion point column needs to adjusted left as columns deleted before it
         let deletedLines = linesDeletedAboveInsertionPoint(insertionPoint, selections)
@@ -64,12 +61,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         /// Switch all different commands id based which defined in Info.plist
         switch Options(command: invocation.commandIdentifier)! {
         case .Cut:
-            cutSelectedText(at: selections, in: buffer, lineSelectionMode: isLineSelectionMode)
+            cutSelectedText(at: selections, in: buffer)
             
             let (newLine, newColumn) = insertionPointPosition(from: insertionPoint, in: buffer)
             resetSelectionTo(line: newLine, column: newColumn, in: buffer)
         case .Copy:
-            copySelectedText(at: selections, in: buffer, lineSelectionMode: isLineSelectionMode)
+            copySelectedText(at: selections, in: buffer)
             
             // If no selection (Insertion Point) then copySelectedText(...) will select the line in
             // order to copy it's contents. In that case, reset the selection back to an Insertion Point.
@@ -172,12 +169,12 @@ extension SourceEditorCommand {
     }
     
     // copy all the text selections to the clipboard and save it to compare durring a paste
-    fileprivate func copySelectedTextToClipboard(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer, lineSelectionMode: Bool) {
+    fileprivate func copySelectedTextToClipboard(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer) {
         // put string on clipboard
         let text = buildStringForClipboard(from: selections, in: buffer)
         
         if writeTextToClipboard(text) {
-            if lineSelectionMode {
+            if areAllSelectionsInLineMode(selections) {
                 SourceEditorCommand.pasteboardItemCopiedInLineMode = text
             } else {
                 SourceEditorCommand.pasteboardItemCopiedInLineMode = nil
@@ -284,9 +281,9 @@ extension SourceEditorCommand {
         return concatiatedText
     }
     
-    fileprivate func cutSelectedText(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer, lineSelectionMode: Bool) {
+    fileprivate func cutSelectedText(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer) {
         // copy the selected text in the buffer to the clipboard
-        copySelectedTextToClipboard(at: selections, in: buffer, lineSelectionMode: lineSelectionMode)
+        copySelectedTextToClipboard(at: selections, in: buffer)
         
         removeSelectedText(at: selections, in: buffer)
     }
@@ -401,8 +398,6 @@ extension SourceEditorCommand {
     
     // delete all the selected text from the buffer
     fileprivate func removeSelectedText(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer) {
-        let isLineSelectionMode = areAllSelectionsInLineMode(buffer.selections as! [XCSourceTextRange])
-        
         // delete selected text from the bottom up to keep indexes valid
         for selection in selections.reversed() {
             var linesToDelete: NSRange
@@ -417,7 +412,7 @@ extension SourceEditorCommand {
                 // default to line selection mode
                 linesToDelete = NSMakeRange(startLine, endLine - startLine)
                 
-                if !isLineSelectionMode {
+                if !areAllSelectionsInLineMode(buffer.selections as! [XCSourceTextRange]) {
                     // Lines between first and last are being deleted
                     // Combine first and last lines into one
                     let firstLine = String((buffer.lines[startLine] as! String).prefix(startColumn))
@@ -442,9 +437,9 @@ extension SourceEditorCommand {
         }
     }
     
-    fileprivate func copySelectedText(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer, lineSelectionMode: Bool) {
+    fileprivate func copySelectedText(at selections: [XCSourceTextRange], in buffer: XCSourceTextBuffer) {
         // first save the current selection
-        copySelectedTextToClipboard(at: selections, in: buffer, lineSelectionMode: lineSelectionMode)
+        copySelectedTextToClipboard(at: selections, in: buffer)
     }
     
     // insertion point should be old location unless line or column doesn't exist
