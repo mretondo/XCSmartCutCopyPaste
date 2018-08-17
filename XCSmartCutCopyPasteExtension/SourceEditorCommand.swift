@@ -83,11 +83,13 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         completionHandler(nil)
     }
 }
+
 extension XCSourceTextPosition: Equatable {
     public static func == (lhs: XCSourceTextPosition, rhs: XCSourceTextPosition) -> Bool {
         return lhs.line == rhs.line && lhs.column == rhs.column
     }
 }
+
 extension XCSourceTextRange {
     //
     // there's an empty selection if start equals end i.e. insertion point
@@ -96,6 +98,7 @@ extension XCSourceTextRange {
         return start == end
     }
 }
+
 extension SourceEditorCommand {
     
     fileprivate func linesDeletedAboveInsertionPoint(_ selections: [XCSourceTextRange], _ insertionPointPosition: XCSourceTextPosition) -> Int {
