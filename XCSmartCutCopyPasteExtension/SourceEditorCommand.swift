@@ -150,7 +150,7 @@ extension SourceEditorCommand {
         return (selection.end.line > selection.start.line && selection.start.column == 0 && selection.end.column == 0)
     }
     
-    fileprivate func buildStringForClipboardFrom(buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange]) -> String {
+    fileprivate func buildStringForClipboard(from buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange]) -> String {
         var text = ""
         var firstPass = true
         
@@ -169,9 +169,9 @@ extension SourceEditorCommand {
     }
     
     // copy all the text selections to the clipboard and save it to compare durring a paste
-    fileprivate func copySelectedTextToClipboardFrom(buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange], lineSelectionMode: Bool) {
+    fileprivate func copySelectedTextToClipboard(from buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange], lineSelectionMode: Bool) {
         // put string on clipboard
-        let text = buildStringForClipboardFrom(buffer: buffer, at: selections)
+        let text = buildStringForClipboard(from: buffer, at: selections)
         
         if writeTextToClipboard(text) {
             if lineSelectionMode {
@@ -283,7 +283,7 @@ extension SourceEditorCommand {
     
     fileprivate func cutSelectedTextFrom(buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange], lineSelectionMode: Bool) {
         // copy the selected text in the buffer to the clipboard
-        copySelectedTextToClipboardFrom(buffer: buffer, at: selections, lineSelectionMode: lineSelectionMode)
+        copySelectedTextToClipboard(from: buffer, at: selections, lineSelectionMode: lineSelectionMode)
         
         removeSelectedText(at: selections, in: buffer)
     }
@@ -444,7 +444,7 @@ extension SourceEditorCommand {
     
     fileprivate func copySelectedTextFrom(buffer: XCSourceTextBuffer, at selections: [XCSourceTextRange], lineSelectionMode: Bool) {
         // first save the current selection
-        copySelectedTextToClipboardFrom(buffer: buffer, at: selections, lineSelectionMode: lineSelectionMode)
+        copySelectedTextToClipboard(from: buffer, at: selections, lineSelectionMode: lineSelectionMode)
     }
     
     // insertion point should be old location unless line or column doesn't exist
