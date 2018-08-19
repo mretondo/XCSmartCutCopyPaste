@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				2747CE1D2125FC07004BA76F /* README.md */,
+				2747CE3A21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros */,
 				2747CDEC2125F007004BA76F /* XCSmartCutCopyPaste */,
 				2747CE032125F17B004BA76F /* XCSmartCutCopyPasteExtension */,
 				2747CE002125F17B004BA76F /* Frameworks */,
@@ -105,7 +106,6 @@
 		2747CDEC2125F007004BA76F /* XCSmartCutCopyPaste */ = {
 			isa = PBXGroup;
 			children = (
-				2747CE3A21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros */,
 				2747CDED2125F007004BA76F /* AppDelegate.swift */,
 				2747CDEF2125F009004BA76F /* Assets.xcassets */,
 				2747CDF12125F009004BA76F /* MainMenu.xib */,

@@ -199,6 +199,14 @@
 					<key>NewFile</key>
 					<string>/Applications/Xcode-beta.app</string>
 				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.dt.Xcode</string>
+					<key>Name</key>
+					<string>Xcode</string>
+					<key>NewFile</key>
+					<string>/Applications/Xcode.app</string>
+				</dict>
 			</array>
 		</dict>
 		<key>ToggleMacroUID</key>
@@ -403,6 +411,14 @@
 					<key>NewFile</key>
 					<string>/Applications/Xcode-beta.app</string>
 				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.dt.Xcode</string>
+					<key>Name</key>
+					<string>Xcode</string>
+					<key>NewFile</key>
+					<string>/Applications/Xcode.app</string>
+				</dict>
 			</array>
 		</dict>
 		<key>ToggleMacroUID</key>
@@ -586,6 +602,14 @@
 					<string>Xcode-beta</string>
 					<key>NewFile</key>
 					<string>/Applications/Xcode-beta.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.dt.Xcode</string>
+					<key>Name</key>
+					<string>Xcode</string>
+					<key>NewFile</key>
+					<string>/Applications/Xcode.app</string>
 				</dict>
 			</array>
 		</dict>
