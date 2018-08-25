@@ -377,11 +377,13 @@ extension SourceEditorCommand {
                 insertionPoint = XCSourceTextPosition(line: line + linesInserted, column: columnsInserted)
             } else {
                 // Combine first and last lines into one
-                let newLine = String((buffer.lines[line] as! String).prefix(column)) +
-                    clipboardText +
-                    String((buffer.lines[line] as! String)[column...])
-                
-                buffer.lines[line] = newLine
+                let lines = String((buffer.lines[line] as! String).prefix(column)) +
+                clipboardText +
+                String((buffer.lines[line] as! String)[column...])
+
+                // replace the line with one or more lines
+                buffer.lines.removeObject(at: line)
+                buffer.lines.insert(lines, at: line)
                 
                 // move insertion point to last line/column of inserted text
                 if linesInserted > 0 {
