@@ -20,7 +20,7 @@ https://github.com/kaunteya/LineX
 https://github.com/wangshengjia/XcodeEditorPlus
 
 
-# MIT Licensed:
+# MIT Licensed
 
 Created by Mike Retondo on 8/16/18.
 Copyright © 2018 Mike Retondo. All rights reserved.
