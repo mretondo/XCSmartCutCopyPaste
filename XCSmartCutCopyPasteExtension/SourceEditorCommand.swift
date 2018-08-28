@@ -378,8 +378,8 @@ extension SourceEditorCommand {
             } else {
                 // Combine first and last lines into one
                 let lines = String((buffer.lines[line] as! String).prefix(column)) +
-                clipboardText +
-                String((buffer.lines[line] as! String)[column...])
+                            clipboardText +
+                            String((buffer.lines[line] as! String)[column...])
 
                 // replace the line with one or more lines
                 buffer.lines.removeObject(at: line)

@@ -7,38 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2747CDEE2125F007004BA76F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747CDED2125F007004BA76F /* AppDelegate.swift */; };
-		2747CDF02125F009004BA76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2747CDEF2125F009004BA76F /* Assets.xcassets */; };
-		2747CDF32125F009004BA76F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2747CDF12125F009004BA76F /* MainMenu.xib */; };
-		2747CE022125F17B004BA76F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2747CE012125F17B004BA76F /* Cocoa.framework */; };
-		2747CE052125F17B004BA76F /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747CE042125F17B004BA76F /* SourceEditorExtension.swift */; };
-		2747CE072125F17B004BA76F /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747CE062125F17B004BA76F /* SourceEditorCommand.swift */; };
-		2747CE0C2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2747CDFF2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2747CE192125FBA6004BA76F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747CE172125FBA6004BA76F /* Common.swift */; };
-		2747CE1B2125FBCB004BA76F /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747CE1A2125FBCB004BA76F /* StringUtil.swift */; };
-		2747CE1F2125FC07004BA76F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2747CE1D2125FC07004BA76F /* README.md */; };
-		2747CE3B21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros in Resources */ = {isa = PBXBuildFile; fileRef = 2747CE3A21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros */; };
-		27617984212B9D1700E1354E /* GreenCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 27617983212B9D1700E1354E /* GreenCheckmark.png */; };
+		2710164A213394F70071804C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101649213394F70071804C /* AppDelegate.swift */; };
+		2710164C213394F70071804C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710164B213394F70071804C /* ViewController.swift */; };
+		27101651213394F80071804C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710164F213394F80071804C /* Main.storyboard */; };
+		27101660213395230071804C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2710165F213395230071804C /* Cocoa.framework */; };
+		27101663213395230071804C /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101662213395230071804C /* SourceEditorExtension.swift */; };
+		27101665213395230071804C /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101664213395230071804C /* SourceEditorCommand.swift */; };
+		2710166A213395230071804C /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27101673213398480071804C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101670213398480071804C /* Common.swift */; };
+		27101674213398480071804C /* GreenCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 27101671213398480071804C /* GreenCheckmark.png */; };
+		27101675213398480071804C /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101672213398480071804C /* StringUtil.swift */; };
+		2773B5202134C82C006CE9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2773B51F2134C82C006CE9AB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2747CE0A2125F17B004BA76F /* PBXContainerItemProxy */ = {
+		27101668213395230071804C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2747CDE22125F007004BA76F /* Project object */;
+			containerPortal = 2710163E213394F70071804C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2747CDFE2125F17B004BA76F;
+			remoteGlobalIDString = 2710165C213395230071804C;
 			remoteInfo = XCSmartCutCopyPasteExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2747CE102125F17B004BA76F /* Embed App Extensions */ = {
+		2710166E213395230071804C /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2747CE0C2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */,
+				2710166A213395230071804C /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,103 +45,101 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2747CDEA2125F007004BA76F /* XCSmartCutCopyPaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCSmartCutCopyPaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2747CDED2125F007004BA76F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2747CDEF2125F009004BA76F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2747CDF22125F009004BA76F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2747CDF42125F009004BA76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2747CDF52125F009004BA76F /* XCSmartCutCopyPaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPaste.entitlements; sourceTree = "<group>"; };
-		2747CDFF2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XCSmartCutCopyPasteExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		2747CE012125F17B004BA76F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		2747CE042125F17B004BA76F /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
-		2747CE062125F17B004BA76F /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
-		2747CE082125F17B004BA76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2747CE092125F17B004BA76F /* XCSmartCutCopyPasteExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPasteExtension.entitlements; sourceTree = "<group>"; };
-		2747CE172125FBA6004BA76F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		2747CE1A2125FBCB004BA76F /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
-		2747CE1D2125FC07004BA76F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2747CE3A21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XCSmartCutCopyPaste.kmmacros; sourceTree = "<group>"; };
-		27617983212B9D1700E1354E /* GreenCheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCheckmark.png; sourceTree = "<group>"; };
+		27101646213394F70071804C /* XCSmartCutCopyPaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCSmartCutCopyPaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27101649213394F70071804C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2710164B213394F70071804C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27101650213394F80071804C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27101652213394F80071804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27101653213394F80071804C /* XCSmartCutCopyPaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPaste.entitlements; sourceTree = "<group>"; };
+		2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XCSmartCutCopyPasteExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2710165F213395230071804C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		27101662213395230071804C /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		27101664213395230071804C /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		27101666213395230071804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27101667213395230071804C /* XCSmartCutCopyPasteExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPasteExtension.entitlements; sourceTree = "<group>"; };
+		27101670213398480071804C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		27101671213398480071804C /* GreenCheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCheckmark.png; sourceTree = "<group>"; };
+		27101672213398480071804C /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		2773B51F2134C82C006CE9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2747CDE72125F007004BA76F /* Frameworks */ = {
+		27101643213394F70071804C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2747CDFC2125F17B004BA76F /* Frameworks */ = {
+		2710165A213395230071804C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747CE022125F17B004BA76F /* Cocoa.framework in Frameworks */,
+				27101660213395230071804C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2747CDE12125F007004BA76F = {
+		2710163D213394F70071804C = {
 			isa = PBXGroup;
 			children = (
-				2747CE1D2125FC07004BA76F /* README.md */,
-				2747CE3A21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros */,
-				2747CDEC2125F007004BA76F /* XCSmartCutCopyPaste */,
-				2747CE032125F17B004BA76F /* XCSmartCutCopyPasteExtension */,
-				2747CE002125F17B004BA76F /* Frameworks */,
-				2747CDEB2125F007004BA76F /* Products */,
+				27101648213394F70071804C /* XCSmartCutCopyPaste */,
+				27101661213395230071804C /* XCSmartCutCopyPasteExtension */,
+				2710165E213395230071804C /* Frameworks */,
+				27101647213394F70071804C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2747CDEB2125F007004BA76F /* Products */ = {
+		27101647213394F70071804C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2747CDEA2125F007004BA76F /* XCSmartCutCopyPaste.app */,
-				2747CDFF2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex */,
+				27101646213394F70071804C /* XCSmartCutCopyPaste.app */,
+				2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2747CDEC2125F007004BA76F /* XCSmartCutCopyPaste */ = {
+		27101648213394F70071804C /* XCSmartCutCopyPaste */ = {
 			isa = PBXGroup;
 			children = (
-				2747CDED2125F007004BA76F /* AppDelegate.swift */,
-				2747CDEF2125F009004BA76F /* Assets.xcassets */,
-				2747CDF12125F009004BA76F /* MainMenu.xib */,
-				2747CDF42125F009004BA76F /* Info.plist */,
-				2747CDF52125F009004BA76F /* XCSmartCutCopyPaste.entitlements */,
+				27101649213394F70071804C /* AppDelegate.swift */,
+				2710164B213394F70071804C /* ViewController.swift */,
+				2773B51F2134C82C006CE9AB /* Assets.xcassets */,
+				2710164F213394F80071804C /* Main.storyboard */,
+				27101652213394F80071804C /* Info.plist */,
+				27101653213394F80071804C /* XCSmartCutCopyPaste.entitlements */,
 			);
 			path = XCSmartCutCopyPaste;
 			sourceTree = "<group>";
 		};
-		2747CE002125F17B004BA76F /* Frameworks */ = {
+		2710165E213395230071804C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2747CE012125F17B004BA76F /* Cocoa.framework */,
+				2710165F213395230071804C /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2747CE032125F17B004BA76F /* XCSmartCutCopyPasteExtension */ = {
+		27101661213395230071804C /* XCSmartCutCopyPasteExtension */ = {
 			isa = PBXGroup;
 			children = (
-				2747CE112125FADB004BA76F /* Supporting Files */,
-				2747CE042125F17B004BA76F /* SourceEditorExtension.swift */,
-				2747CE062125F17B004BA76F /* SourceEditorCommand.swift */,
-				2747CE082125F17B004BA76F /* Info.plist */,
-				2747CE092125F17B004BA76F /* XCSmartCutCopyPasteExtension.entitlements */,
+				2710166F213398480071804C /* Supporting Files */,
+				27101662213395230071804C /* SourceEditorExtension.swift */,
+				27101664213395230071804C /* SourceEditorCommand.swift */,
+				27101666213395230071804C /* Info.plist */,
+				27101667213395230071804C /* XCSmartCutCopyPasteExtension.entitlements */,
 			);
 			path = XCSmartCutCopyPasteExtension;
 			sourceTree = "<group>";
 		};
-		2747CE112125FADB004BA76F /* Supporting Files */ = {
+		2710166F213398480071804C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				27617983212B9D1700E1354E /* GreenCheckmark.png */,
-				2747CE1A2125FBCB004BA76F /* StringUtil.swift */,
-				2747CE172125FBA6004BA76F /* Common.swift */,
+				27101670213398480071804C /* Common.swift */,
+				27101671213398480071804C /* GreenCheckmark.png */,
+				27101672213398480071804C /* StringUtil.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,32 +147,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2747CDE92125F007004BA76F /* XCSmartCutCopyPaste */ = {
+		27101645213394F70071804C /* XCSmartCutCopyPaste */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2747CDF82125F009004BA76F /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPaste" */;
+			buildConfigurationList = 27101656213394F80071804C /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPaste" */;
 			buildPhases = (
-				2747CDE62125F007004BA76F /* Sources */,
-				2747CDE72125F007004BA76F /* Frameworks */,
-				2747CDE82125F007004BA76F /* Resources */,
-				2747CE102125F17B004BA76F /* Embed App Extensions */,
+				27101642213394F70071804C /* Sources */,
+				27101643213394F70071804C /* Frameworks */,
+				27101644213394F70071804C /* Resources */,
+				2710166E213395230071804C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2747CE0B2125F17B004BA76F /* PBXTargetDependency */,
+				27101669213395230071804C /* PBXTargetDependency */,
 			);
 			name = XCSmartCutCopyPaste;
 			productName = XCSmartCutCopyPaste;
-			productReference = 2747CDEA2125F007004BA76F /* XCSmartCutCopyPaste.app */;
+			productReference = 27101646213394F70071804C /* XCSmartCutCopyPaste.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2747CDFE2125F17B004BA76F /* XCSmartCutCopyPasteExtension */ = {
+		2710165C213395230071804C /* XCSmartCutCopyPasteExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2747CE0D2125F17B004BA76F /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPasteExtension" */;
+			buildConfigurationList = 2710166B213395230071804C /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPasteExtension" */;
 			buildPhases = (
-				2747CDFB2125F17B004BA76F /* Sources */,
-				2747CDFC2125F17B004BA76F /* Frameworks */,
-				2747CDFD2125F17B004BA76F /* Resources */,
+				27101659213395230071804C /* Sources */,
+				2710165A213395230071804C /* Frameworks */,
+				2710165B213395230071804C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -183,33 +180,28 @@
 			);
 			name = XCSmartCutCopyPasteExtension;
 			productName = XCSmartCutCopyPasteExtension;
-			productReference = 2747CDFF2125F17B004BA76F /* XCSmartCutCopyPasteExtension.appex */;
+			productReference = 2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2747CDE22125F007004BA76F /* Project object */ = {
+		2710163E213394F70071804C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Mike Retondo";
 				TargetAttributes = {
-					2747CDE92125F007004BA76F = {
-						CreatedOnToolsVersion = 10.0;
-						SystemCapabilities = {
-							com.apple.HardenedRuntime = {
-								enabled = 1;
-							};
-						};
+					27101645213394F70071804C = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
-					2747CDFE2125F17B004BA76F = {
-						CreatedOnToolsVersion = 10.0;
+					2710165C213395230071804C = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 2747CDE52125F007004BA76F /* Build configuration list for PBXProject "XCSmartCutCopyPaste" */;
+			buildConfigurationList = 27101641213394F70071804C /* Build configuration list for PBXProject "XCSmartCutCopyPaste" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,82 +209,81 @@
 				en,
 				Base,
 			);
-			mainGroup = 2747CDE12125F007004BA76F;
-			productRefGroup = 2747CDEB2125F007004BA76F /* Products */;
+			mainGroup = 2710163D213394F70071804C;
+			productRefGroup = 27101647213394F70071804C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2747CDE92125F007004BA76F /* XCSmartCutCopyPaste */,
-				2747CDFE2125F17B004BA76F /* XCSmartCutCopyPasteExtension */,
+				27101645213394F70071804C /* XCSmartCutCopyPaste */,
+				2710165C213395230071804C /* XCSmartCutCopyPasteExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2747CDE82125F007004BA76F /* Resources */ = {
+		27101644213394F70071804C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747CDF02125F009004BA76F /* Assets.xcassets in Resources */,
-				2747CE3B21260EB8004BA76F /* XCSmartCutCopyPaste.kmmacros in Resources */,
-				2747CE1F2125FC07004BA76F /* README.md in Resources */,
-				2747CDF32125F009004BA76F /* MainMenu.xib in Resources */,
+				2773B5202134C82C006CE9AB /* Assets.xcassets in Resources */,
+				27101651213394F80071804C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2747CDFD2125F17B004BA76F /* Resources */ = {
+		2710165B213395230071804C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27617984212B9D1700E1354E /* GreenCheckmark.png in Resources */,
+				27101674213398480071804C /* GreenCheckmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2747CDE62125F007004BA76F /* Sources */ = {
+		27101642213394F70071804C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747CDEE2125F007004BA76F /* AppDelegate.swift in Sources */,
+				2710164C213394F70071804C /* ViewController.swift in Sources */,
+				2710164A213394F70071804C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2747CDFB2125F17B004BA76F /* Sources */ = {
+		27101659213395230071804C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747CE192125FBA6004BA76F /* Common.swift in Sources */,
-				2747CE1B2125FBCB004BA76F /* StringUtil.swift in Sources */,
-				2747CE052125F17B004BA76F /* SourceEditorExtension.swift in Sources */,
-				2747CE072125F17B004BA76F /* SourceEditorCommand.swift in Sources */,
+				27101675213398480071804C /* StringUtil.swift in Sources */,
+				27101663213395230071804C /* SourceEditorExtension.swift in Sources */,
+				27101673213398480071804C /* Common.swift in Sources */,
+				27101665213395230071804C /* SourceEditorCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2747CE0B2125F17B004BA76F /* PBXTargetDependency */ = {
+		27101669213395230071804C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2747CDFE2125F17B004BA76F /* XCSmartCutCopyPasteExtension */;
-			targetProxy = 2747CE0A2125F17B004BA76F /* PBXContainerItemProxy */;
+			target = 2710165C213395230071804C /* XCSmartCutCopyPasteExtension */;
+			targetProxy = 27101668213395230071804C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2747CDF12125F009004BA76F /* MainMenu.xib */ = {
+		2710164F213394F80071804C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2747CDF22125F009004BA76F /* Base */,
+				27101650213394F80071804C /* Base */,
 			);
-			name = MainMenu.xib;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2747CDF62125F009004BA76F /* Debug */ = {
+		27101654213394F80071804C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,8 +335,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -353,7 +343,7 @@
 			};
 			name = Debug;
 		};
-		2747CDF72125F009004BA76F /* Release */ = {
+		27101655213394F80071804C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -400,14 +390,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		2747CDF92125F009004BA76F /* Debug */ = {
+		27101657213394F80071804C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -416,7 +405,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 58ZACZB2L8;
-				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XCSmartCutCopyPaste/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,11 +412,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mretondo.XCSmartCutCopyPaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		2747CDFA2125F009004BA76F /* Release */ = {
+		27101658213394F80071804C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -437,7 +425,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 58ZACZB2L8;
-				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = XCSmartCutCopyPaste/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,11 +432,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mretondo.XCSmartCutCopyPaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		2747CE0E2125F17B004BA76F /* Debug */ = {
+		2710166C213395230071804C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XCSmartCutCopyPasteExtension/XCSmartCutCopyPasteExtension.entitlements;
@@ -462,15 +449,14 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mretondo.XCSmartCutCopyPaste.XCSmartCutCopyPasteExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		2747CE0F2125F17B004BA76F /* Release */ = {
+		2710166D213395230071804C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XCSmartCutCopyPasteExtension/XCSmartCutCopyPasteExtension.entitlements;
@@ -483,45 +469,44 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mretondo.XCSmartCutCopyPaste.XCSmartCutCopyPasteExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2747CDE52125F007004BA76F /* Build configuration list for PBXProject "XCSmartCutCopyPaste" */ = {
+		27101641213394F70071804C /* Build configuration list for PBXProject "XCSmartCutCopyPaste" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2747CDF62125F009004BA76F /* Debug */,
-				2747CDF72125F009004BA76F /* Release */,
+				27101654213394F80071804C /* Debug */,
+				27101655213394F80071804C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2747CDF82125F009004BA76F /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPaste" */ = {
+		27101656213394F80071804C /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPaste" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2747CDF92125F009004BA76F /* Debug */,
-				2747CDFA2125F009004BA76F /* Release */,
+				27101657213394F80071804C /* Debug */,
+				27101658213394F80071804C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2747CE0D2125F17B004BA76F /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPasteExtension" */ = {
+		2710166B213395230071804C /* Build configuration list for PBXNativeTarget "XCSmartCutCopyPasteExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2747CE0E2125F17B004BA76F /* Debug */,
-				2747CE0F2125F17B004BA76F /* Release */,
+				2710166C213395230071804C /* Debug */,
+				2710166D213395230071804C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2747CDE22125F007004BA76F /* Project object */;
+	rootObject = 2710163E213394F70071804C /* Project object */;
 }
