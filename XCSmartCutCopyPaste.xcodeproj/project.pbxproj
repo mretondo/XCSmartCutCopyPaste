@@ -15,7 +15,6 @@
 		27101665213395230071804C /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101664213395230071804C /* SourceEditorCommand.swift */; };
 		2710166A213395230071804C /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		27101673213398480071804C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101670213398480071804C /* Common.swift */; };
-		27101674213398480071804C /* GreenCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 27101671213398480071804C /* GreenCheckmark.png */; };
 		27101675213398480071804C /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101672213398480071804C /* StringUtil.swift */; };
 		2773B5202134C82C006CE9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2773B51F2134C82C006CE9AB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -58,7 +57,6 @@
 		27101666213395230071804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27101667213395230071804C /* XCSmartCutCopyPasteExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPasteExtension.entitlements; sourceTree = "<group>"; };
 		27101670213398480071804C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		27101671213398480071804C /* GreenCheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCheckmark.png; sourceTree = "<group>"; };
 		27101672213398480071804C /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		2773B51F2134C82C006CE9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				27101670213398480071804C /* Common.swift */,
-				27101671213398480071804C /* GreenCheckmark.png */,
 				27101672213398480071804C /* StringUtil.swift */,
 			);
 			path = "Supporting Files";
@@ -234,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27101674213398480071804C /* GreenCheckmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
