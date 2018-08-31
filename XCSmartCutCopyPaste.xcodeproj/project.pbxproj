@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		2710164A213394F70071804C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101649213394F70071804C /* AppDelegate.swift */; };
 		2710164C213394F70071804C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710164B213394F70071804C /* ViewController.swift */; };
-		27101651213394F80071804C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710164F213394F80071804C /* Main.storyboard */; };
 		27101660213395230071804C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2710165F213395230071804C /* Cocoa.framework */; };
 		27101663213395230071804C /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101662213395230071804C /* SourceEditorExtension.swift */; };
 		27101665213395230071804C /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101664213395230071804C /* SourceEditorCommand.swift */; };
 		2710166A213395230071804C /* XCSmartCutCopyPasteExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		27101673213398480071804C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101670213398480071804C /* Common.swift */; };
 		27101675213398480071804C /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27101672213398480071804C /* StringUtil.swift */; };
+		272B09E52138E36A00B7B569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272B09E32138E36A00B7B569 /* Main.storyboard */; };
 		2773B5202134C82C006CE9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2773B51F2134C82C006CE9AB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		27101646213394F70071804C /* XCSmartCutCopyPaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCSmartCutCopyPaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27101649213394F70071804C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2710164B213394F70071804C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27101650213394F80071804C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27101652213394F80071804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27101653213394F80071804C /* XCSmartCutCopyPaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPaste.entitlements; sourceTree = "<group>"; };
 		2710165D213395230071804C /* XCSmartCutCopyPasteExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XCSmartCutCopyPasteExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,7 @@
 		27101667213395230071804C /* XCSmartCutCopyPasteExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCSmartCutCopyPasteExtension.entitlements; sourceTree = "<group>"; };
 		27101670213398480071804C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		27101672213398480071804C /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		272B09E42138E36A00B7B569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		2773B51F2134C82C006CE9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,10 +102,10 @@
 		27101648213394F70071804C /* XCSmartCutCopyPaste */ = {
 			isa = PBXGroup;
 			children = (
+				272B09E22138E36A00B7B569 /* Base.lproj */,
 				27101649213394F70071804C /* AppDelegate.swift */,
 				2710164B213394F70071804C /* ViewController.swift */,
 				2773B51F2134C82C006CE9AB /* Assets.xcassets */,
-				2710164F213394F80071804C /* Main.storyboard */,
 				27101652213394F80071804C /* Info.plist */,
 				27101653213394F80071804C /* XCSmartCutCopyPaste.entitlements */,
 			);
@@ -139,6 +139,14 @@
 				27101672213398480071804C /* StringUtil.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		272B09E22138E36A00B7B569 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				272B09E32138E36A00B7B569 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272B09E52138E36A00B7B569 /* Main.storyboard in Resources */,
 				2773B5202134C82C006CE9AB /* Assets.xcassets in Resources */,
-				27101651213394F80071804C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +276,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2710164F213394F80071804C /* Main.storyboard */ = {
+		272B09E32138E36A00B7B569 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				27101650213394F80071804C /* Base */,
+				272B09E42138E36A00B7B569 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
