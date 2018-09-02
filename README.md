@@ -13,7 +13,7 @@ Hopefully this works well for you and wish Apple would just add this functionali
 
 ### User privacy policy
 
-This application gathers NO user personal data at all, period! No network connections are made.  
+This application gathers NO user personal data at all, period!  
 
 
 ### This project was inspired by the extensions  
