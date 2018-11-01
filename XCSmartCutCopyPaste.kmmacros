@@ -13,6 +13,93 @@
 				<key>Actions</key>
 				<array>
 					<dict>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NotifyOnFailure</key>
+						<false/>
+						<key>Path</key>
+						<string></string>
+						<key>StopOnFailure</key>
+						<false/>
+						<key>Text</key>
+						<string>use AppleScript version "2.4" -- Yosemite (10.10) or later
+
+using terms from application "Xcode"
+	set workspaceDocument to active workspace document of application "Xcode"
+	
+	tell application "System Events"
+		tell application process "Xcode"
+			set projectName to name of workspaceDocument
+			set isFocused to false
+			
+			-- order of checking matters, don't change
+			if not isFocused then
+				try
+					--	 Assistant Editor has focus with Standard Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor closed
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+		end tell
+		
+		return isFocused
+	end tell
+end using terms from
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>isFocused</string>
+					</dict>
+					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -30,6 +117,16 @@
 									<string>C</string>
 									<key>MenuTitle</key>
 									<string>Smart Copy</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>isFocused</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>true</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -90,7 +187,7 @@
 											<key>Name</key>
 											<string>Xcode-beta</string>
 											<key>NewFile</key>
-											<string>/Applications/Xcode-beta.app</string>
+											<string>/Applications/Xcode.app</string>
 										</dict>
 										<key>TargetingType</key>
 										<string>Specific</string>
@@ -120,7 +217,7 @@
 									<key>Name</key>
 									<string>Xcode-beta</string>
 									<key>NewFile</key>
-									<string>/Applications/Xcode-beta.app</string>
+									<string>/Applications/Xcode.app</string>
 								</dict>
 								<key>TargetingType</key>
 								<string>Specific</string>
@@ -133,7 +230,7 @@
 				<key>CreationDate</key>
 				<real>551748932.28601801</real>
 				<key>ModificationDate</key>
-				<real>556140800.82502997</real>
+				<real>562730083.19585896</real>
 				<key>Name</key>
 				<string>Copy - number pad + - Enter</string>
 				<key>Triggers</key>
@@ -143,26 +240,6 @@
 						<string>Pressed</string>
 						<key>KeyCode</key>
 						<integer>69</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>76</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>78</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -195,10 +272,79 @@
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
 					<key>Name</key>
-					<string>Xcode-beta</string>
+					<string>Xcode</string>
 					<key>NewFile</key>
-					<string>/Applications/Xcode-beta.app</string>
+					<string>/Applications/Xcode.app</string>
 				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>552BFCAD-D369-49E7-AA4C-C62DF3B847D0</string>
+		<key>UID</key>
+		<string>6F78536B-7AC2-4E3B-9493-A5C724149081</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>493683916.36101103</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SelectMenuItem</string>
+						<key>Menu</key>
+						<array>
+							<string>Edit</string>
+							<string>Copy</string>
+						</array>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.dt.Xcode</string>
+							<key>Name</key>
+							<string>Xcode</string>
+							<key>NewFile</key>
+							<string>/Applications/Xcode.app</string>
+						</dict>
+						<key>TargetingType</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>559265661.99401498</real>
+				<key>ModificationDate</key>
+				<real>559265829.62731898</real>
+				<key>Name</key>
+				<string>Edit Menu Copy</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>B3624604-3D48-4BB6-B4F1-E1EBE1DC7557</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Xcode</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
 				<dict>
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
@@ -225,6 +371,93 @@
 				<key>Actions</key>
 				<array>
 					<dict>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NotifyOnFailure</key>
+						<false/>
+						<key>Path</key>
+						<string></string>
+						<key>StopOnFailure</key>
+						<false/>
+						<key>Text</key>
+						<string>use AppleScript version "2.4" -- Yosemite (10.10) or later
+
+using terms from application "Xcode"
+	set workspaceDocument to active workspace document of application "Xcode"
+	
+	tell application "System Events"
+		tell application process "Xcode"
+			set projectName to name of workspaceDocument
+			set isFocused to false
+			
+			-- order of checking matters, don't change
+			if not isFocused then
+				try
+					--	 Assistant Editor has focus with Standard Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor closed
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+		end tell
+		
+		return isFocused
+	end tell
+end using terms from
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>isFocused</string>
+					</dict>
+					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -242,6 +475,16 @@
 									<string>C</string>
 									<key>MenuTitle</key>
 									<string>Smart Paste</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>isFocused</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>true</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -300,9 +543,9 @@
 											<key>BundleIdentifier</key>
 											<string>com.apple.dt.Xcode</string>
 											<key>Name</key>
-											<string>Xcode-beta</string>
+											<string>Xcode</string>
 											<key>NewFile</key>
-											<string>/Applications/Xcode-beta.app</string>
+											<string>/Applications/Xcode.app</string>
 										</dict>
 										<key>TargetingType</key>
 										<string>Specific</string>
@@ -330,9 +573,9 @@
 									<key>BundleIdentifier</key>
 									<string>com.apple.dt.Xcode</string>
 									<key>Name</key>
-									<string>Xcode-beta</string>
+									<string>Xcode</string>
 									<key>NewFile</key>
-									<string>/Applications/Xcode-beta.app</string>
+									<string>/Applications/Xcode.app</string>
 								</dict>
 								<key>TargetingType</key>
 								<string>Specific</string>
@@ -345,7 +588,7 @@
 				<key>CreationDate</key>
 				<real>552441677.22194803</real>
 				<key>ModificationDate</key>
-				<real>556140809.84007001</real>
+				<real>562728236.189533</real>
 				<key>Name</key>
 				<string>Paste - fn key</string>
 				<key>Triggers</key>
@@ -407,10 +650,79 @@
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
 					<key>Name</key>
-					<string>Xcode-beta</string>
+					<string>Xcode</string>
 					<key>NewFile</key>
-					<string>/Applications/Xcode-beta.app</string>
+					<string>/Applications/Xcode.app</string>
 				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>552BFCAD-D369-49E7-AA4C-C62DF3B847D0</string>
+		<key>UID</key>
+		<string>6F78536B-7AC2-4E3B-9493-A5C724149081</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>493683916.36101103</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SelectMenuItem</string>
+						<key>Menu</key>
+						<array>
+							<string>Edit</string>
+							<string>Paste</string>
+						</array>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.dt.Xcode</string>
+							<key>Name</key>
+							<string>Xcode</string>
+							<key>NewFile</key>
+							<string>/Applications/Xcode.app</string>
+						</dict>
+						<key>TargetingType</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>559265661.99401498</real>
+				<key>ModificationDate</key>
+				<real>559265842.90502703</real>
+				<key>Name</key>
+				<string>Edit Menu Paste</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>956F90AE-85B1-46D8-BE3C-C4CD2D449B5E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Xcode</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
 				<dict>
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
@@ -437,6 +749,93 @@
 				<key>Actions</key>
 				<array>
 					<dict>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NotifyOnFailure</key>
+						<false/>
+						<key>Path</key>
+						<string></string>
+						<key>StopOnFailure</key>
+						<false/>
+						<key>Text</key>
+						<string>use AppleScript version "2.4" -- Yosemite (10.10) or later
+
+using terms from application "Xcode"
+	set workspaceDocument to active workspace document of application "Xcode"
+	
+	tell application "System Events"
+		tell application process "Xcode"
+			set projectName to name of workspaceDocument
+			set isFocused to false
+			
+			-- order of checking matters, don't change
+			if not isFocused then
+				try
+					--	 Assistant Editor has focus with Standard Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor closed
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+			
+			if not isFocused then
+				try
+					--	 Standard Editor has focus with Assistant Editor opened
+					set isFocused to focused of ¬
+						text area 1 of ¬
+						scroll area 1 of ¬
+						group 1 of ¬
+						splitter group 1 of ¬
+						splitter group 1 of ¬
+						group 2 of ¬
+						splitter group projectName of ¬
+						window 1
+				end try
+			end if
+		end tell
+		
+		return isFocused
+	end tell
+end using terms from
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>isFocused</string>
+					</dict>
+					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -454,6 +853,16 @@
 									<string>C</string>
 									<key>MenuTitle</key>
 									<string>Smart Cut</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>isFocused</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>true</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -514,7 +923,7 @@
 											<key>Name</key>
 											<string>Xcode-beta</string>
 											<key>NewFile</key>
-											<string>/Applications/Xcode-beta.app</string>
+											<string>/Applications/Xcode.app</string>
 										</dict>
 										<key>TargetingType</key>
 										<string>Specific</string>
@@ -544,7 +953,7 @@
 									<key>Name</key>
 									<string>Xcode-beta</string>
 									<key>NewFile</key>
-									<string>/Applications/Xcode-beta.app</string>
+									<string>/Applications/Xcode.app</string>
 								</dict>
 								<key>TargetingType</key>
 								<string>Specific</string>
@@ -557,7 +966,7 @@
 				<key>CreationDate</key>
 				<real>551748932.28601801</real>
 				<key>ModificationDate</key>
-				<real>556140812.90818596</real>
+				<real>562730101.108217</real>
 				<key>Name</key>
 				<string>Cut - number pad *</string>
 				<key>Triggers</key>
@@ -576,7 +985,7 @@
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>67</integer>
+						<integer>78</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -599,10 +1008,79 @@
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
 					<key>Name</key>
-					<string>Xcode-beta</string>
+					<string>Xcode</string>
 					<key>NewFile</key>
-					<string>/Applications/Xcode-beta.app</string>
+					<string>/Applications/Xcode.app</string>
 				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>552BFCAD-D369-49E7-AA4C-C62DF3B847D0</string>
+		<key>UID</key>
+		<string>6F78536B-7AC2-4E3B-9493-A5C724149081</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>493683916.36101103</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SelectMenuItem</string>
+						<key>Menu</key>
+						<array>
+							<string>Edit</string>
+							<string>Cut</string>
+						</array>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.dt.Xcode</string>
+							<key>Name</key>
+							<string>Xcode</string>
+							<key>NewFile</key>
+							<string>/Applications/Xcode.app</string>
+						</dict>
+						<key>TargetingType</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>559265661.99401498</real>
+				<key>ModificationDate</key>
+				<real>559265784.88301802</real>
+				<key>Name</key>
+				<string>Edit Menu Cut</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>7</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F266A5BC-1B56-4998-84E7-D46FDAFEEFB8</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Xcode</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
 				<dict>
 					<key>BundleIdentifier</key>
 					<string>com.apple.dt.Xcode</string>
