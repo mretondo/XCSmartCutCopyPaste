@@ -356,7 +356,7 @@ extension SourceEditorCommand {
             
             // how many lines are inserted
             // how many columns are inserted on the last line
-            let newlineIndices: [String.Index] = clipboardText.indicesOf("\n")
+            let newlineIndices: [String.Index] = clipboardText.indices(of: "\n")
             let linesInserted = newlineIndices.count
             let columnsInserted = getCharsOnLastLine(clipboardText, linesInserted, newlineIndices)
             
