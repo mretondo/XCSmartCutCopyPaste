@@ -49,7 +49,8 @@ extension StringProtocol {
 
 extension StringProtocol {
 
-    // returns the number of bytes used to hold the string
+    /// Returns the number of bytes used to hold the string. This works because
+    /// Swift 5 now uses UTF-8 as it's backing store.
     @inline(__always)
     var size: Int {
         get { self.utf8.count }
