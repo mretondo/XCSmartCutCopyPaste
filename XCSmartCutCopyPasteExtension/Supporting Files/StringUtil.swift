@@ -110,16 +110,34 @@ extension StringProtocol {
 
 extension StringProtocol {
 
+    /// Returns a subsequence, containing the Range<Int> within.
+    ///
+    /// - Parameters:
+    ///   - range: A half-open interval from a lower bound up to, but not including, an upper bound.
     func substring(with range: Range<Int>) -> Self.SubSequence? {
-        let indices = self.indices
+        let r = 0...self.count
 
-        let count = indices.count
-        guard range.lowerBound >= 0 && range.lowerBound < count && range.upperBound <= count else { return nil }
+        guard r.contains(range.lowerBound) && r.contains(range.upperBound) else { return nil }
 
         let start = self.index(at: range.lowerBound)
         let end = self.index(at: range.upperBound)
 
         return self[start..<end]
+    }
+
+    /// Returns a subsequence, containing the ClosedRange<Int> within.
+    ///
+    /// - Parameters:
+    ///   - range: A ClosedRange interval from a lower bound up to, but not including, an upper bound.
+    func substring(with range: ClosedRange<Int>) -> Self.SubSequence? {
+        let r = 0..<self.count
+
+        guard r.contains(range.lowerBound) && r.contains(range.upperBound) else { return nil }
+
+        let start = self.index(at: range.lowerBound)
+        let end = self.index(at: range.upperBound)
+
+        return self[start...end]
     }
 
     // 'i' can be negitive to go in reverse direction
